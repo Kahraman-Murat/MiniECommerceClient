@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-declare var $: any
+import { ToastrService } from 'ngx-toastr';
+import { CustomToastrService, ToastrMessageType, ToastrPosition } from './services/ui/custom-toastr.service';
+declare var $: any;   // JQuery kütüphanesi icin eklenir
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,30 @@ declare var $: any
 })
 export class AppComponent {
   title = 'MiniECommerceClient';
+  constructor(private toastrService: CustomToastrService){
+    
+    /*
+    toastrService.message("Merhaba","Murat", {
+      messageType: ToastrMessageType.Info,
+      position: ToastrPosition.TopFullWidth
+    });
+    toastrService.message("Merhaba","Murat", {
+      messageType : ToastrMessageType.Error, 
+      position: ToastrPosition.BottomCenter
+    });
+    toastrService.message("Merhaba","Murat", {
+      messageType: ToastrMessageType.Success, 
+      position: ToastrPosition.BottomLeft
+    });
+    toastrService.message("Merhaba","Murat", {
+      messageType: ToastrMessageType.Warning, 
+      position: ToastrPosition.BottomRight
+    });
+    */
+
+  }
 }
-$(document).ready(() => {
-  alert("merhaba")
-})
+//jquery nin calismasini test etmek icin
+//$(document).ready(() => {
+//  alert("merhaba")
+//})
