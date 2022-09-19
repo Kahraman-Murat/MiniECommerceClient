@@ -37,3 +37,7 @@ export class AppComponent {
 //$(document).ready(() => {
 //  alert("merhaba")
 //})
+
+//$.get("https://localhost:7297/api/products", (data: any) =>{
+//  console.log(data)
+//})
