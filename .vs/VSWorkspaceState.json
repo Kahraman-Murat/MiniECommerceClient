@@ -5,12 +5,12 @@
     "\\src\\app",
     "\\src\\app\\admin",
     "\\src\\app\\admin\\components",
-    "\\src\\app\\directives",
-    "\\src\\app\\directives\\admin",
+    "\\src\\app\\admin\\components\\products",
+    "\\src\\app\\admin\\components\\products\\create",
     "\\src\\app\\services",
     "\\src\\app\\services\\common",
-    "\\src\\assets"
+    "\\src\\app\\services\\common\\file-upload"
   ],
-  "SelectedNode": "\\src\\app\\services\\common\\models\\product.service.ts",
+  "SelectedNode": "\\src\\app\\admin\\components\\products\\create\\create.component.html",
   "PreviewInSolutionExplorer": false
 }
