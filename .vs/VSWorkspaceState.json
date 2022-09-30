@@ -3,14 +3,13 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\dialogs",
-    "\\src\\app\\dialogs\\delete-dialog",
-    "\\src\\app\\directives",
-    "\\src\\app\\directives\\admin",
+    "\\src\\app\\admin",
+    "\\src\\app\\admin\\layout",
+    "\\src\\app\\admin\\layout\\components",
+    "\\src\\app\\admin\\layout\\components\\sidebar",
     "\\src\\app\\services",
     "\\src\\app\\services\\common",
     "\\src\\app\\services\\common\\file-upload"
   ],
-  "SelectedNode": "\\src\\app\\services\\common\\file-upload\\file-upload.component.ts",
   "PreviewInSolutionExplorer": false
 }
