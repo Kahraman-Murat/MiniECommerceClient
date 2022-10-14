@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <form [formGroup]="frm" (ngSubmit)="onSubmit(frm.value)">
+      <div class="mb-3">
+        <label for="adSoyad" class="form-label">Ad Soyad</label>
+        <input type="text" formControlName="adSoyad" class="form-control" id="adSoyad" placeholder="Ad Soyad" [ngClass]="{'is-invalid': submitted && component['adSoyad'].errors}">
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['adSoyad'].errors['required']">Lütfen Ad Soyad bilgisini giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['adSoyad'].errors['minlength']) || (component['adSoyad'].errors['maxlength'])">Lütfen Ad Soyad bilgisini 3 ile 50 karakter arasinda giriniz.</small>
+      </div>
+      <div class="mb-3">
+        <label for="kullaniciAd" class="form-label">Kullanici Adi</label>
+        <input type="text" formControlName="kullaniciAd" class="form-control" id="kullaniciAd" placeholder="Kullanici Adi" [ngClass]="{'is-invalid': submitted && component['kullaniciAd'].errors}">
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['kullaniciAd'].errors['required']">Lütfen Kullanici Adi bilgisini giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['kullaniciAd'].errors['minlength']) || (component['kullaniciAd'].errors['maxlength'])">Lütfen Kullanici Adi bilgisini 3 ile 50 karakter arasinda giriniz.</small>
+      </div>
+      <div class="mb-3">
+        <label for="email1" class="form-label">Email Adres</label>
+        <input type="email" formControlName="email1" class="form-control" id="email1" placeholder="Email address" [ngClass]="{'is-invalid': submitted && component['email1'].errors}" aria-describedby="emailHelp">
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['email1'].errors['required']">Lütfen Email Adres bilgisini giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['email1'].errors['email'])">Lütfen gecerli bir Email Adres bilgisini giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['email1'].errors['maxlength'])">Lütfen Email Adres bilgisini en fazla 250 karakter giriniz.</small>
+      </div>
+      <div class="mb-3">
+        <label for="password1" class="form-label">Sifre</label>
+        <input type="password" formControlName="password1" class="form-control" id="password1" placeholder="Sifre" [ngClass]="{'is-invalid': submitted && component['password1'].errors}">
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['password1'].errors['required']">Lütfen Sifreyi giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['password1'].errors['email']) || (component['password1'].errors['maxlength'])">Lütfen Sifreyi 8 ile 20 karakter arasinda giriniz.</small>
+      </div>
+      <div class="mb-3">
+        <label for="password2" class="form-label">Sifre Tekrari</label>
+        <input type="password" formControlName="password2" class="form-control" id="password2" placeholder="Sifre Tekrari" [ngClass]="{'is-invalid': submitted && component['password2'].errors}">
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['password2'].errors['required']">Lütfen Sifreyi giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['password2'].errors['email']) || (component['password2'].errors['maxlength'])">Lütfen Sifreyi 8 ile 20 karakter arasinda giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && frm.hasError('notSame')">Lütfen Sifreyi dogrulayiniz.</small>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Kayit Ol</button>
+    </form>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+
+
