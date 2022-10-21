@@ -3,35 +3,35 @@
   <div class="col-md-6">
     <form [formGroup]="frm" (ngSubmit)="onSubmit(frm.value)">
       <div class="mb-3">
-        <label for="adSoyad" class="form-label">Ad Soyad</label>
-        <input type="text" formControlName="adSoyad" class="form-control" id="adSoyad" placeholder="Ad Soyad" [ngClass]="{'is-invalid': submitted && component['adSoyad'].errors}">
-        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['adSoyad'].errors['required']">Lütfen Ad Soyad bilgisini giriniz.</small>
-        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['adSoyad'].errors['minlength']) || (component['adSoyad'].errors['maxlength'])">Lütfen Ad Soyad bilgisini 3 ile 50 karakter arasinda giriniz.</small>
+        <label for="nameSurname" class="form-label">Ad Soyad</label>
+        <input type="text" formControlName="nameSurname" class="form-control" id="nameSurname" placeholder="Ad Soyad" [ngClass]="{'is-invalid': submitted && component['nameSurname'].errors}">
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['nameSurname'].errors['required']">Lütfen Ad Soyad bilgisini giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['nameSurname'].errors['minlength'] || component['nameSurname'].errors['maxlength'])">Lütfen Ad Soyad bilgisini 3 ile 50 karakter arasinda giriniz.</small>
       </div>
       <div class="mb-3">
-        <label for="kullaniciAd" class="form-label">Kullanici Adi</label>
-        <input type="text" formControlName="kullaniciAd" class="form-control" id="kullaniciAd" placeholder="Kullanici Adi" [ngClass]="{'is-invalid': submitted && component['kullaniciAd'].errors}">
-        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['kullaniciAd'].errors['required']">Lütfen Kullanici Adi bilgisini giriniz.</small>
-        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['kullaniciAd'].errors['minlength']) || (component['kullaniciAd'].errors['maxlength'])">Lütfen Kullanici Adi bilgisini 3 ile 50 karakter arasinda giriniz.</small>
+        <label for="userName" class="form-label">Kullanici Adi</label>
+        <input type="text" formControlName="userName" class="form-control" id="userName" placeholder="Kullanici Adi" [ngClass]="{'is-invalid': submitted && component['userName'].errors}">
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['userName'].errors['required']">Lütfen Kullanici Adi bilgisini giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['userName'].errors['minlength'] || component['userName'].errors['maxlength'])">Lütfen Kullanici Adi bilgisini 3 ile 50 karakter arasinda giriniz.</small>
       </div>
       <div class="mb-3">
-        <label for="email1" class="form-label">Email Adres</label>
-        <input type="email" formControlName="email1" class="form-control" id="email1" placeholder="Email address" [ngClass]="{'is-invalid': submitted && component['email1'].errors}" aria-describedby="emailHelp">
-        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['email1'].errors['required']">Lütfen Email Adres bilgisini giriniz.</small>
-        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['email1'].errors['email'])">Lütfen gecerli bir Email Adres bilgisini giriniz.</small>
-        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['email1'].errors['maxlength'])">Lütfen Email Adres bilgisini en fazla 250 karakter giriniz.</small>
+        <label for="email" class="form-label">Email Adres</label>
+        <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email address" [ngClass]="{'is-invalid': submitted && component['email'].errors}" aria-describedby="emailHelp">
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['email'].errors['required']">Lütfen Email Adres bilgisini giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['email'].errors['email'])">Lütfen gecerli bir Email Adres bilgisini giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['email'].errors['maxlength'])">Lütfen Email Adres bilgisini en fazla 250 karakter giriniz.</small>
       </div>
       <div class="mb-3">
-        <label for="password1" class="form-label">Sifre</label>
-        <input type="password" formControlName="password1" class="form-control" id="password1" placeholder="Sifre" [ngClass]="{'is-invalid': submitted && component['password1'].errors}">
-        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['password1'].errors['required']">Lütfen Sifreyi giriniz.</small>
-        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['password1'].errors['email']) || (component['password1'].errors['maxlength'])">Lütfen Sifreyi 8 ile 20 karakter arasinda giriniz.</small>
+        <label for="password" class="form-label">Sifre</label>
+        <input type="password" formControlName="password" class="form-control" id="password" placeholder="Sifre" [ngClass]="{'is-invalid': submitted && component['password'].errors}">
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['password'].errors['required']">Lütfen Sifreyi giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['password'].errors['email'] || component['password'].errors['maxlength'])">Lütfen Sifreyi 8 ile 20 karakter arasinda giriniz.</small>
       </div>
       <div class="mb-3">
-        <label for="password2" class="form-label">Sifre Tekrari</label>
-        <input type="password" formControlName="password2" class="form-control" id="password2" placeholder="Sifre Tekrari" [ngClass]="{'is-invalid': submitted && component['password2'].errors}">
-        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['password2'].errors['required']">Lütfen Sifreyi giriniz.</small>
-        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['password2'].errors['email']) || (component['password2'].errors['maxlength'])">Lütfen Sifreyi 8 ile 20 karakter arasinda giriniz.</small>
+        <label for="passwordConfirm" class="form-label">Sifre Tekrari</label>
+        <input type="password" formControlName="passwordConfirm" class="form-control" id="passwordConfirm" placeholder="Sifre Tekrari" [ngClass]="{'is-invalid': submitted && component['passwordConfirm'].errors}">
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && component['passwordConfirm'].errors['required']">Lütfen Sifreyi giriniz.</small>
+        <small class="form-text text-muted invalid-feedback" *ngIf="submitted && (component['passwordConfirm'].errors['email'] || component['passwordConfirm'].errors['maxlength'])">Lütfen Sifreyi 8 ile 20 karakter arasinda giriniz.</small>
         <small class="form-text text-muted invalid-feedback" *ngIf="submitted && frm.hasError('notSame')">Lütfen Sifreyi dogrulayiniz.</small>
       </div>
 
