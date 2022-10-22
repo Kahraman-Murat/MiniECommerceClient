@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { HttpClientModule } from '@angular/common/http';
+import { JwtModule } from '@auth0/angular-jwt';
 
 
 @NgModule({
@@ -21,7 +22,14 @@ import { HttpClientModule } from '@angular/common/http';
     AdminModule, UiModule,
     ToastrModule.forRoot(),
     NgxSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => localStorage.getItem("accessToken"),
+        //bu adrese gidenlere token e uygula disallowedRoutes ise uygulama 
+        allowedDomains: ["localhost:7297"]        
+      }
+    })
   ],
   providers: [
     { provide: "baseUrl", useValue: "https://localhost:7297/api", multi: true }
