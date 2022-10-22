@@ -3,12 +3,13 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\contracts\\users",
     "\\src\\app\\services",
+    "\\src\\app\\services\\common",
+    "\\src\\app\\services\\common\\models",
     "\\src\\app\\ui",
     "\\src\\app\\ui\\components",
-    "\\src\\app\\ui\\components\\register",
-    "\\src\\assets"
+    "\\src\\app\\ui\\components\\login",
+    "\\src\\app\\ui\\components\\register"
   ],
   "SelectedNode": "\\src\\app\\ui\\components\\register\\register.component.ts",
   "PreviewInSolutionExplorer": false
