@@ -9,11 +9,14 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
+import { LoginComponent } from './ui/components/login/login.component';
+import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -29,10 +32,28 @@ import { JwtModule } from '@auth0/angular-jwt';
         //bu adrese gidenlere token e uygula disallowedRoutes ise uygulama 
         allowedDomains: ["localhost:7297"]        
       }
-    })
+    }),
+    SocialLoginModule
   ],
   providers: [
-    { provide: "baseUrl", useValue: "https://localhost:7297/api", multi: true }
+    { provide: "baseUrl", useValue: "https://localhost:7297/api", multi: true },
+    {
+      provide: "SocialAuthServiceConfig",
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider("client-id")
+          },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider("client-id")
+          }
+        ],
+        onError: err => console.log(err)
+      } as SocialAuthServiceConfig
+    }
   ],
   bootstrap: [AppComponent]
 })
