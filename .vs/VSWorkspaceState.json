@@ -9,7 +9,8 @@
     "\\src\\app\\ui",
     "\\src\\app\\ui\\components",
     "\\src\\app\\ui\\components\\login",
-    "\\src\\app\\ui\\components\\register"
+    "\\src\\app\\ui\\components\\register",
+    "\\src\\assets"
   ],
   "SelectedNode": "\\src\\app\\services\\common\\models\\user.service.ts",
   "PreviewInSolutionExplorer": false
