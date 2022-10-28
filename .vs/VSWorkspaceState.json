@@ -12,6 +12,6 @@
     "\\src\\app\\ui\\components\\register",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\services\\common\\models\\user.service.ts",
+  "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }
