@@ -45,7 +45,7 @@ export class SelectProductImageDialogComponent extends BaseDialog<SelectProductI
 
   async ngOnInit() {
     this.spinner.show(SpinnerType.BallAtom);
-    this.images = await this.productService.readImages(this.data as string, () => this.spinner.hide(SpinnerType.BallAtom));
+    this.images = await this.productService.readImages(this.data as string, () => this.spinner.hide(SpinnerType.BallAtom));    
   }
 
   async deleteImage(imageId: string, event: any) {
@@ -62,8 +62,15 @@ export class SelectProductImageDialogComponent extends BaseDialog<SelectProductI
         });
       }
     })
+        
+  }
 
-    
+  showCase(imageId: string) {
+    //alert("Image Id : " + imageId + " - Product Id : " + this.data);
+    this.spinner.show(SpinnerType.BallAtom);
+    this.productService.changeShowcaseImage(imageId, this.data as string, () => {
+      this.spinner.hide(SpinnerType.BallAtom);
+    })
   }
 }
 
