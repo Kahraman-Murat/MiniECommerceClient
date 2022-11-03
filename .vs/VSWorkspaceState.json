@@ -3,15 +3,15 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\admin",
-    "\\src\\app\\admin\\components",
-    "\\src\\app\\admin\\components\\products",
-    "\\src\\app\\admin\\components\\products\\list",
-    "\\src\\app\\contracts",
-    "\\src\\app\\dialogs",
-    "\\src\\app\\dialogs\\select-product-image-dialog",
-    "\\src\\app\\ui"
+    "\\src\\app\\contracts\\basket",
+    "\\src\\app\\services",
+    "\\src\\app\\services\\common",
+    "\\src\\app\\services\\common\\models",
+    "\\src\\app\\ui",
+    "\\src\\app\\ui\\components",
+    "\\src\\app\\ui\\components\\products",
+    "\\src\\app\\ui\\components\\products\\list"
   ],
-  "SelectedNode": "\\src\\app\\contracts\\list_product.ts",
+  "SelectedNode": "\\src\\app\\services\\common\\http-error-handler-interceptor.service.ts",
   "PreviewInSolutionExplorer": false
 }

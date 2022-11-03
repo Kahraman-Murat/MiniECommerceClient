@@ -1,3 +1,3 @@
-export class BaseUrl {
+export class Base_Url {
   url: string;
 }

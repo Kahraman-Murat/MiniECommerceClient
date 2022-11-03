@@ -2,7 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom, Observable } from 'rxjs';
 import { Action } from 'rxjs/internal/scheduler/Action';
-import { BaseUrl } from '../../../contracts/base_url';
+import { Base_Url } from '../../../contracts/base_url';
 import { Create_Product } from '../../../contracts/create_product';
 import { List_Product } from '../../../contracts/list_product';
 import { List_Product_Image } from '../../../contracts/list_product_image';
@@ -15,8 +15,8 @@ export class FileService {
 
   constructor(private httpClientService: HttpClientService) { }
 
-  async getBaseStorageUrl(): Promise<BaseUrl> {
-    const getObservable: Observable<BaseUrl> = this.httpClientService.get<BaseUrl>({
+  async getBaseStorageUrl(): Promise<Base_Url> {
+    const getObservable: Observable<Base_Url> = this.httpClientService.get<Base_Url>({
       controller: "files",
       action: "GetBaseStorageUrl"
     });

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from './services/common/auth.service';
+import { HttpClientService } from './services/common/http-client.service';
 import { CustomToastrService, ToastrMessageType, ToastrPosition } from './services/ui/custom-toastr.service';
 declare var $: any;   // JQuery kütüphanesi icin eklenir
 
@@ -15,7 +16,24 @@ export class AppComponent {
   constructor(
     public authService: AuthService,
     private toastrService: CustomToastrService,
-    private router: Router) {
+    private router: Router,
+    private httpClientService: HttpClientService) {
+
+
+    //httpClientService.get({
+    //  controller: "baskets"
+    //}).subscribe(data => {
+    //  debugger;
+    //});
+
+    //httpClientService.post({
+    //  controller: "baskets"
+    //}, {
+    //  productId: "31d1de82-a02d-40a8-b8a4-b3166131637c",
+    //  quantity: 88
+    //}).subscribe(data => {
+    //  debugger;
+    //});
 
     authService.identityCheck();
 
