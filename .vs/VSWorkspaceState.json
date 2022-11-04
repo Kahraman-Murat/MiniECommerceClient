@@ -3,15 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\contracts\\basket",
     "\\src\\app\\services",
-    "\\src\\app\\services\\common",
-    "\\src\\app\\services\\common\\models",
-    "\\src\\app\\ui",
-    "\\src\\app\\ui\\components",
-    "\\src\\app\\ui\\components\\products",
-    "\\src\\app\\ui\\components\\products\\list"
+    "\\src\\app\\services\\common"
   ],
-  "SelectedNode": "\\src\\app\\services\\common\\http-error-handler-interceptor.service.ts",
+  "SelectedNode": "\\src\\app\\services\\common\\dynamic-load-component.service.ts",
   "PreviewInSolutionExplorer": false
 }
