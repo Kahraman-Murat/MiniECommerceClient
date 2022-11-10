@@ -14,7 +14,8 @@ export class DynamicLoadComponentService {
   //    ComponentFactory nesnesi olusturup, döner.
 
   constructor(
-    private componentFactoryResolver: ComponentFactoryResolver) { }
+    // private componentFactoryResolver: ComponentFactoryResolver *angular kaldurdi artik kullanilmiyor
+    ) { }
 
   async loadComponent(component: ComponentType, viewContainerRef: ViewContainerRef) {
     let _component: any = null;
@@ -26,7 +27,8 @@ export class DynamicLoadComponentService {
     }
 
     viewContainerRef.clear();
-    return viewContainerRef.createComponent(this.componentFactoryResolver.resolveComponentFactory(_component))
+    return viewContainerRef.createComponent(_component);
+      //this.componentFactoryResolver.resolveComponentFactory(_component) bunada gerek kalmadi
   }
 }
 

@@ -1,0 +1,71 @@
+<h2 mat-dialog-title>Siparis Detayi</h2>
+<div class="row" style="width:100%;">
+  <div class="">
+    <table  style="width:100%;">
+      <tr>
+        <td style="font-weight:bold;">Siparis No</td>
+        <td>{{singleOrder.orderCode}}</td>
+        <td style="text-align: right; font-weight: bold;">Toplam Tutar</td>        
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Tarih</td>
+        <td>{{singleOrder.createdDate}}</td>
+        <td  rowspan="2" style="text-align:right;font-size:25px;font-weight:bold; color:darkred;">{{totalPrice | currency : '€'}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Adres</td>
+        <td>{{singleOrder.address}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Aciklama</td>
+        <td colspan="2">{{singleOrder.description}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+<mat-dialog-content class="mat-typography">
+  <br />
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 order-detail-table">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{element.name}}</td>
+    </ng-container>
+
+    <!-- Price Column -->
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef>Price</th>
+      <td mat-cell *matCellDef="let element">{{element.price | currency : '€'}}</td>
+    </ng-container>
+
+    <!-- Quantity Column -->
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef>Quantity</th>
+      <td mat-cell *matCellDef="let element">{{element.quantity}}</td>
+    </ng-container>
+
+    <!-- TotalPrice Column -->
+    <ng-container matColumnDef="totalPrice">
+      <th mat-header-cell *matHeaderCellDef>Total Price</th>
+      <td mat-cell *matCellDef="let element" >{{(element.price * element.quantity) | currency : '€'}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row
+        (click)="clickedRows.add(row)"
+        [class.order-detail-row-is-clicked]="clickedRows.has(row)"
+        *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <br />
+
+
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Kapat</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Siparisi Tamamlama</button>
+</mat-dialog-actions>

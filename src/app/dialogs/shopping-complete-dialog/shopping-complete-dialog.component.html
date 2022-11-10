@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Alisveris Tamamlama Uyarisi</h1>
+<div mat-dialog-content>
+  <p>Alisverisi Tamamlamak Istediginize Emin misiniz ?</p>
+  <!--<mat-form-field appearance="fill">
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field>-->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Iptal</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="complete()">Evet</button>
+</div>
+

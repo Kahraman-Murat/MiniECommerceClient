@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AdminModule } from './admin/admin.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -40,6 +40,7 @@ import { DynamicLoadComponentDirective } from './directives/common/dynamic-load-
   ],
   providers: [
     { provide: "baseUrl", useValue: "https://localhost:7297/api", multi: true },
+    { provide: "baseSignalRUrl", useValue: "https://localhost:7297/", multi: true },
     {
       provide: "SocialAuthServiceConfig",
       useValue: {
@@ -57,7 +58,8 @@ import { DynamicLoadComponentDirective } from './directives/common/dynamic-load-
         onError: err => console.log(err)
       } as SocialAuthServiceConfig
     },
-    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorHandlerInterceptorService, multi:true }
+    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorHandlerInterceptorService, multi: true }
+    //,{ provide: LOCALE_ID, useValue: 'en-EN' }
   ],
   bootstrap: [AppComponent]
 })
