@@ -3,15 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\admin",
-    "\\src\\app\\admin\\components",
-    "\\src\\app\\admin\\components\\products",
-    "\\src\\app\\admin\\components\\products\\list",
-    "\\src\\app\\dialogs",
-    "\\src\\app\\dialogs\\file-upload-dialog",
-    "\\src\\app\\dialogs\\order-detail-dialog",
-    "\\src\\assets"
+    "\\src\\app\\services",
+    "\\src\\app\\services\\common",
+    "\\src\\app\\services\\common\\models",
+    "\\src\\app\\ui",
+    "\\src\\app\\ui\\components",
+    "\\src\\app\\ui\\components\\password-reset",
+    "\\src\\app\\ui\\components\\update-password"
   ],
-  "SelectedNode": "\\src\\app\\dialogs\\file-upload-dialog\\file-upload-dialog.component.ts",
+  "SelectedNode": "\\src\\app\\services\\common\\models\\user.service.ts",
   "PreviewInSolutionExplorer": false
 }
