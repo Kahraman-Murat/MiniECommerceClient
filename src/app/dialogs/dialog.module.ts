@@ -14,6 +14,8 @@ import { MatTableModule } from '@angular/material/table';
 import { CompleteOrderDialogComponent } from './complete-order-dialog/complete-order-dialog.component';
 import { AuthorizeMenuDialogComponent } from './authorize-menu-dialog/authorize-menu-dialog.component';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatListModule } from '@angular/material/list';
+import { AuthorizeUserDialogComponent } from './authorize-user-dialog/authorize-user-dialog.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,12 @@ import { MatBadgeModule } from '@angular/material/badge';
     ShoppingCompleteDialogComponent,
     OrderDetailDialogComponent,
     CompleteOrderDialogComponent,
-    AuthorizeMenuDialogComponent
+    AuthorizeMenuDialogComponent,
+    AuthorizeUserDialogComponent
   ],
   imports: [
     CommonModule,
-    MatDialogModule, MatButtonModule, MatCardModule, MatTableModule, MatBadgeModule,
+    MatDialogModule, MatButtonModule, MatCardModule, MatTableModule, MatBadgeModule, MatListModule,
     FileUploadModule
   ]
 })

@@ -8,18 +8,19 @@
 </div>
 
 <mat-selection-list #rolesComponent>
-  <mat-list-option *ngFor="let role of listRoles"  selected="{{role.selected}}" >
+  <mat-list-option *ngFor="let role of listRoles" selected="{{role.selected}}">
     {{role.name}}
   </mat-list-option>
 </mat-selection-list>
 
-<p matBadge="{{rolesComponent.selectedOptions.selected.length}} - {{roles.totalRoleCount}}"  matBadgeOverlap="true" >
+<p matBadge="{{rolesComponent.selectedOptions.selected.length}} - {{roles.totalRoleCount}}" matBadgeOverlap="true">
   Options selected:
 </p>
 
-<div matBadge="4" matBadgeOverlap="false" ></div>
+<div matBadge="4" matBadgeOverlap="false"></div>
 <div mat-dialog-actions>
   <button mat-button (click)="close()">Iptal</button>
   <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="assignRoles(rolesComponent)">Rolleri Ata</button>
 </div>
+
 

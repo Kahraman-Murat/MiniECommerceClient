@@ -44,7 +44,7 @@ export enum MessageType {
 export enum Position {
   TopCenter = "top-center",
   TopRight = "top-right",
-  TopLeft = "tio-left",
+  TopLeft = "top-left",
   BottomCenter = "bottom-center",
   BottomRight = "bottom-right",
   BottomLeft = "bottom-left",
