@@ -38,7 +38,10 @@ export class HttpErrorHandlerInterceptorService implements HttpInterceptor {
                 });
             }
           }).then(data => {
-
+            this.toastrService.message("Bu islemi yapmaya yetkiniz bulunmamaktadir.", "Yetkisiz Islem !", {
+              messageType: ToastrMessageType.Warning,
+              position: ToastrPosition.BottomFullWidth
+            });
           });            
           break;
         case HttpStatusCode.InternalServerError:
