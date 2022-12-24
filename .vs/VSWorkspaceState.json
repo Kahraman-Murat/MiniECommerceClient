@@ -12,6 +12,6 @@
     "\\src\\app\\services",
     "\\src\\app\\services\\common"
   ],
-  "SelectedNode": "\\src\\app\\services\\common\\http-error-handler-interceptor.service.ts",
+  "SelectedNode": "\\src\\app\\dialogs\\authorize-menu-dialog\\authorize-menu-dialog.component.scss",
   "PreviewInSolutionExplorer": false
 }
