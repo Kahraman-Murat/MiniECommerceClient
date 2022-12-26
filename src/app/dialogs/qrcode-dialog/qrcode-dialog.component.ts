@@ -30,6 +30,7 @@ export class QrcodeDialogComponent extends BaseDialog<QrcodeDialogComponent> imp
     const url: string = URL.createObjectURL(qrCodeBlob);
     this.qrCodeSafeUrl = this.domSanitizer.bypassSecurityTrustUrl(url);
     this.spinner.hide(SpinnerType.BallAtom);
+    
 
 
   }

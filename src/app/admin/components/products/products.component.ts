@@ -3,6 +3,8 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
 import { Create_Product } from 'src/app/contracts/create_product';
 import { HttpClientService } from 'src/app/services/common/http-client.service';
+import { QrcodeReadingDialogComponent } from '../../../dialogs/qrcode-reading-dialog/qrcode-reading-dialog.component';
+import { DialogService } from '../../../services/common/dialog.service';
 import { ListComponent } from './list/list.component';
 
 @Component({
@@ -12,7 +14,9 @@ import { ListComponent } from './list/list.component';
 })
 export class ProductsComponent extends BaseComponent implements OnInit {
 
-  constructor(spinner: NgxSpinnerService, private httpClientService: HttpClientService) {
+  constructor(spinner: NgxSpinnerService,
+    private httpClientService: HttpClientService,
+    private dialogService: DialogService) {
     super(spinner)
   }
 
@@ -58,5 +62,16 @@ export class ProductsComponent extends BaseComponent implements OnInit {
   @ViewChild(ListComponent) listComponents: ListComponent;
   createdProduct(createdProduct: Create_Product) {
     this.listComponents.getProducts();
+  }
+
+  showProductQrcodeReading() {
+    this.dialogService.openDialog({
+      componentType: QrcodeReadingDialogComponent,
+      data: null,
+      options: {
+        width:"1000px"
+      },
+      afterClosed: () => { }
+    })
   }
 }
